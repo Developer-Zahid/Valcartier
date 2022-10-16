@@ -4,7 +4,7 @@
 	/* Document on load functions */
 	$(window).on('load', function () {
         // preLoader();
-		// headerHeightFixer();
+		headerHeightFixer();
     });
 
 	/* Preloader init */
@@ -38,9 +38,11 @@
 	});
 
 	/* Fix Header Height function */
-    function headerHeightFixer(){
+	$(window).ready(function(){
 		$('header').before('<div class="header-height-fix"></div>');
-    	$('.header-height-fix').css('height', $('header').innerHeight() - 2 +'px');
+	});
+    function headerHeightFixer(){
+    	$('.header-height-fix').css('height', $('.header').innerHeight() +'px');
 	};
 
 	/* Closes responsive menu when a navbar link is clicked */

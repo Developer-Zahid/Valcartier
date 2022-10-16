@@ -56,8 +56,8 @@ ol {
 }
 
 img{
-	display: block;
 	object-fit: cover;
+	max-width: 100%;
 }
 
 .user-select-none{
@@ -73,6 +73,67 @@ img{
 
 .dark-layout .layout-match-logo{
 	filter: invert(1);
+}
+
+.ribbon{
+	position: relative;
+	perspective: toRem(100000);
+
+	&__circle{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include mobile{
+			left: 45%;
+		}
+		transform-style: preserve-3d;
+		transform: translate(-50%, -50%) rotateX(40deg) rotateY(20deg) rotateZ(0);
+		width: toRem(250);
+		height: toRem(300);
+		@include min-tablet{
+			width: toRem(350);
+			height: toRem(400);
+		}
+		@include min-desktop-lg{
+			width: toRem(450);
+			height: toRem(500);
+		}
+		border: 1px solid color-primary();
+		border-radius: 50%;
+		animation: rounded 50s linear infinite;
+		@keyframes rounded {
+			0%{
+				transform: translate(-50%, -50%) rotateX(40deg) rotateY(20deg) rotateZ(0);
+			}
+			100%{
+				transform: translate(-50%, -50%) rotateX(40deg) rotateY(20deg) rotateZ(360deg);
+			}
+		}
+
+		&::before,
+		&::after
+		{
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: inherit;
+			border: inherit;
+			transform-style: preserve-3d;
+		}
+
+		&::before{
+			transform: translateZ(toRem(50));
+		}
+
+		&::after{
+			transform: translateZ(toRem(100));
+		}
+	}
 }
 
 /* Custom Container Style */

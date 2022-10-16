@@ -1,16 +1,33 @@
 /* Common Button's Style */
 .primary-btn{
-	color: unset;
-	font-size: 1.2rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: toRem(16);
+	@include min-desktop-lg{
+		font-size: toRem(18);
+	}
 	font-family: $font-primary;
-	font-weight: 400;
-	padding: 0.7em 1.4em;
-	background: unset;
-	@extend %transition;
-	&:hover, 
-	&:focus{
-		color: unset;
-		background: unset;
+	font-weight: 500;
+	padding: toRem(14) toRem(23);
+	color: color-secondary();
+	background: color-primary();
+	border: 1px solid color-primary();
+	border-radius: 4px;
+	text-transform: capitalize;
+	transition: all .25s ease-in-out;
+
+	&__text{
+		display: inline-block;
+		margin-right: toRem(6);
+	}
+
+	&:active,
+	&:hover,
+	&:focus
+	{
+		color: color-primary();
+		background: color-secondary();
 	}
 }
 

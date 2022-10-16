@@ -8,15 +8,73 @@
 	width: 100%;
 	@extend %transition;
 	.navbar{
+		&-brand__image{
+			max-height: toRem(63);
+		}
 		&-toggler{
-			font-size: 1rem;
-			color: unset;
+			position: relative;
+			color: color-primary();
+			width: toRem(50);
+			height: toRem(40);
+			border: 0;
+			box-shadow: none !important;
+			color: color-primary();
+			background-color: transparent;
+			padding: 0;
+			border-radius: 0;
 			z-index: 8;
 			@extend %transition;
-			&[aria-expanded="true"],
-			&:hover{
-				color: $color-primary;
+
+			&::before,
+			&::after
+			{
+				content: "";
+				position: absolute;
+				right: 0;
+				height: 3px;
+				border-radius: 3px;
+				background-color: currentColor;
+				transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+				transform-origin: right;
+				transform: translateY(-50%) rotate(0);
 			}
+			
+			&::before{
+				top: 35%;
+				width: 100%;
+			}
+			&::after{
+				top: 65%;
+				width: 70%;
+			}
+
+			&[aria-expanded="true"]{
+				color: $color-danger;
+
+				&::before{
+					top: 0;
+					transform: translateY(-50%) rotate(-45deg);
+				}
+
+				&::after{
+					top: 100%;
+					transform: translateY(-50%) rotate(45deg);
+				}
+			}
+
+			&[aria-expanded="true"],
+			&:active
+			{
+				&::after{
+					width: 100%;
+				}
+			}
+			@include hover{
+				&::after{
+					width: 100%;
+				}
+			}
+
 		}
 		&-collapse{
 			@include desktop{
@@ -37,9 +95,8 @@
 				}
 				.navbar-nav{
 					width: 100%;
-					margin-top: toRem(20);
 					.nav-item{
-						margin: 0.3rem 0.6rem;
+						margin: 0.3rem 0;
 					}
 				}
 			}
@@ -49,19 +106,52 @@
 		}
 		.nav{
 			&-link{
-				color: color-primary();
-				font-size: 1rem;
-				font-weight: 400;
-				font-family: unset;
-				padding-left: toRem(15);
-				padding-right: toRem(15);
+				color: color-primary(0.7);
+				font-size: toRem(17);
+				@include min-desktop-xl{
+					font-size: toRem(20);
+				}
+				font-weight: 500;
+				font-family: $font-primary;
+				text-transform: capitalize;
+				padding: 0;
 				@extend %transition;
+
+				&__text{
+					position: relative;
+					display: inline-block;
+					padding: toRem(8) toRem(12);
+
+					&::after{
+						content: "";
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						width: 100%;
+						height: 2px;
+						border-radius: 3px;
+						background-color: color-primary();
+						transform: scaleX(0);
+						transform-origin: right center;
+						transition: transform .3s linear;
+					}
+				}
+
 				&.active,
 				&:hover,
 				&:focus-visible{
 					color: color-primary();
+
+					.nav-link__text::after{
+						transform: scaleX(1);
+						transform-origin: left center;
+					}
 				}
 			}
+		}
+		.primary-btn{
+			padding-left: toRem(45);
+			padding-right: toRem(45);
 		}
 	}
 	&--fixed{
@@ -69,7 +159,6 @@
 		transform: translateY(-100%);
 		background-color: color-secondary();
 		border-color: color-primary(0.2);
-		// box-shadow: 0 3px 18px color-primary(0.05);
 		animation: header_in .4s linear forwards;
 	}
 }
@@ -92,6 +181,7 @@
 	width: 100%;
 	height: 100%;
 	background: color-primary(0.5);
+	backdrop-filter: blur(10px);
 	z-index: 8;
 	opacity: 0;
 	transition: opacity .4s ease .4s;

@@ -28,26 +28,39 @@
 				<a class="navbar-brand" href="./">
 					<img src="./assets/images/logo/logo.png" alt="logo" class="navbar-brand__image layout-match-logo">
 				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<i class="fas fa-bars"></i>
-				</button>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
 			
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav text-center ml-auto">
+					<ul class="navbar-nav text-center mx-auto">
 						<li class="nav-item">
-							<a class="nav-link active" href="#banner">Home</a>
+							<a class="nav-link active" href="#banner">
+								<span class="nav-link__text">Home</span>
+							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#features">Features</a>
+							<a class="nav-link" href="#features">
+								<span class="nav-link__text">Features</span>
+							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#features">Why Us</a>
+							<a class="nav-link" href="#features">
+								<span class="nav-link__text">Why Us</span>
+							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#testimonials">Testimonials</a>
+							<a class="nav-link" href="#testimonials">
+								<span class="nav-link__text">Testimonials</span>
+							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#contact">Contact</a>
+							<a class="nav-link" href="#contact">
+								<span class="nav-link__text">Contact</span>
+							</a>
+						</li>
+					</ul>
+					<ul class="navbar-nav text-center">
+						<li class="nav-item">
+							<a class="primary-btn" href="#!">Let’s Talk</a>
 						</li>
 					</ul>
 				</div>
@@ -58,8 +71,30 @@
 	<div class="offCanvasMenuCloser position-fixed" data-toggle="collapse" data-target="#navbarSupportedContent" role="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></div>
 
 	<!-- Banner Section -->
-	<h1 class="min-vh-100 text-uppercase font-weight-bold d-flex align-items-center justify-content-center mb-0">Hello World</h1>
-	<h1 class="min-vh-100 text-uppercase font-weight-bold d-flex align-items-center justify-content-center mb-0">Hello World</h1>
+	<section id="banner" class="banner overflow-hidden">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6 banner__content mb-5 mb-lg-0">
+					<h1 class="banner__title">Valcartier <span class="d-block">Digital Marketing</span> Services</h1>
+					<p class="banner__text">Revolutionising Mobile Marketing With Personalised Content Creation & Advertisements</p>
+					<a href="#!" class="primary-btn">
+						<span class="primary-btn__text">Get started</span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="primary-btn__icon" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+						</svg>
+					</a>
+				</div>
+				<div class="col-lg-6 text-center">
+					<div class="banner__preview ribbon user-select-none">
+						<div class="ribbon__circle"></div>
+						<img src="./assets/images/sections/banner-image.png" alt="Roket Image" class="banner__image">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<h1 class="min-vh-100 text-uppercase font-weight-bold d-flex align-items-center justify-content-center mb-0">Coming Soon</h1>
 
 	<!-- Scroll To Top Button -->
 	<div class="scroll-top position-fixed">

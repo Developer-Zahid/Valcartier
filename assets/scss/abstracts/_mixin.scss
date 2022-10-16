@@ -78,6 +78,16 @@
     }
 }
 
+@mixin hover {
+    @media (hover: hover) {
+        &:hover,
+        &:focus-visible
+        {
+            @content;
+        }
+    }
+}
+
 //sm-lg
 @mixin tablet-to-desktop-lg {
     @media (min-width: 768px) and (max-width: 1199px) {

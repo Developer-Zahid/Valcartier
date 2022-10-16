@@ -26,8 +26,14 @@ h5,.h5{
     font-size: toRem(12);
 }
 p{
-    font-size: toRem(16);
+    color: color-primary(0.5);
+    font-size: toRem(18);
+    line-height: 1.5;
+    font-family: $font-primary;
     @include mobile{
         font-size: toRem(14);
+    }
+    @include min-tablet{
+        font-weight: 500;
     }
 }

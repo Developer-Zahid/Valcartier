@@ -1,0 +1,33 @@
+/* Common Button's Style */
+.primary-btn{
+	color: unset;
+	font-size: 1.2rem;
+	font-family: $font-primary;
+	font-weight: 400;
+	padding: 0.7em 1.4em;
+	background: unset;
+	@extend %transition;
+	&:hover, 
+	&:focus{
+		color: unset;
+		background: unset;
+	}
+}
+
+.scroll-top{
+	bottom: 3%;
+	right: 1%;
+	display: none;
+	cursor: pointer;
+	z-index: 7;
+	@include mobile{
+		bottom: 2%;
+	}
+	&__btn{
+		width: 2.8rem;
+		height: 2.8rem;
+		font-size: 1.1rem;
+		color: unset;
+		background: unset;
+	}
+}

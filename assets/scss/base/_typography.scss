@@ -1,0 +1,33 @@
+/* Google Fonts Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Typography Reset */
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6{
+    font-family: $font-primary;
+}
+h1,.h1{
+    font-size: toRem(36);
+}
+h2,.h2{
+    font-size: toRem(30);
+}
+h3,.h3{
+    font-size: toRem(24);
+}
+h4,.h4{
+    font-size: toRem(18);
+}
+h5,.h5{
+    font-size: toRem(12);
+}
+p{
+    font-size: toRem(16);
+    @include mobile{
+        font-size: toRem(14);
+    }
+}

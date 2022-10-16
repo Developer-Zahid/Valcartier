@@ -1,0 +1,14 @@
+/* Footer Section Style */
+.footer{
+    &__copyright{
+        color: unset;
+        font-size: toRem(14);
+        &__link{
+            @extend %transition;
+            &:hover,
+            &:focus{
+                color: unset;
+            }
+        }
+    }
+}

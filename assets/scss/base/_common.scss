@@ -1,0 +1,170 @@
+/* Reset CSS */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+::selection{
+	color: unset;
+	background: unset;
+}
+
+html,
+body{
+	scroll-behavior: smooth;
+}
+
+html{
+	font-size: 16px;
+	text-size-adjust: none;
+}
+
+body {
+	color: $color-black;
+	font-weight: 400;
+	font-family: $font-primary;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+	text-decoration: none;
+	color: unset;
+}
+
+button,
+button:hover,
+button:focus,
+button:active {
+	outline: none;
+}
+
+input:-webkit-autofill{
+	-webkit-text-fill-color: unset;
+	transition: background-color 5000s;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+img{
+	object-fit: cover;
+}
+
+.user-select-none{
+	pointer-events: none;
+}
+
+.list-inline{
+	font-size: 0;
+	&-item{
+		font-size: 1rem;
+	}
+}
+
+/* Custom Container Style */
+.container{
+	@include min-desktop-lg{
+		max-width: 1260px;
+	}
+}
+
+/* Common Slick Style */
+.slick{
+	&__arrows{
+		top: 0;
+		position: absolute;
+		z-index: 3;
+		width: toRem(40);
+		height: toRem(40);
+		color: unset;
+		background-color: unset;
+		font-size: toRem(20);
+		text-align: center;
+		cursor: pointer;
+		@extend %transition;
+		&--left{
+			right: 0;
+		}
+		&--right{
+			right: 0;
+		}
+		&:hover,
+		&:focus-visible{
+			color: unset;
+			background-color: unset;
+		}
+	}
+	&-dots{
+		display: flex;
+		justify-content: center;
+		margin-bottom: 0;
+		line-height: 0;
+		li{
+			&:not(:last-child){
+				margin-right: 1rem;
+			}
+			button{
+				font-size: 0;
+				width: toRem(8);
+				height: toRem(8);
+				background: $color-primary;
+				border: 1px solid $color-primary;
+				border-radius: toRem(8);
+				@extend %transition;
+			}
+			&.slick-active{
+				button{
+					width: toRem(16);
+					background: transparent;
+				}
+			}
+		}
+	}
+}
+
+/* Preloader Section Style */
+.preloader{
+	top: 0;
+	left: 0;
+	z-index: 9999;
+}
+
+/* Common Section Gap Style */
+.section-gap{
+	padding: 6rem 0;
+	@include desktop{
+		padding: 3rem 0;
+	}
+	&--fix{
+		padding-bottom: calc(6rem - 30px);
+		@include desktop{
+			padding-bottom: calc(3rem - 30px);
+		}
+	}
+}
+
+/* Common Section Heading Style */
+.section-header{
+	margin-bottom: toRem(50);
+	@include mobile{
+		margin-bottom: toRem(30);
+	}
+	&__title{
+		font-size: toRem(40);
+		font-family: unset;
+		@include tablet{
+			font-size: toRem(30);
+		}
+		@include mobile{
+			font-size: toRem(26);
+		}
+	}
+}

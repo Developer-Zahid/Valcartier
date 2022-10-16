@@ -9,8 +9,8 @@
 }
 
 ::selection{
-	color: unset;
-	background: unset;
+	color: color-secondary();
+	background: color-primary();
 }
 
 html,
@@ -24,9 +24,10 @@ html{
 }
 
 body {
-	color: $color-black;
+	color: color-primary();
 	font-weight: 400;
 	font-family: $font-primary;
+	background-color: color-secondary();
 }
 
 a,
@@ -55,6 +56,7 @@ ol {
 }
 
 img{
+	display: block;
 	object-fit: cover;
 }
 
@@ -67,6 +69,10 @@ img{
 	&-item{
 		font-size: 1rem;
 	}
+}
+
+.dark-layout .layout-match-logo{
+	filter: invert(1);
 }
 
 /* Custom Container Style */

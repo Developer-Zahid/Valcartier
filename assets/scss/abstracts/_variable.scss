@@ -1,11 +1,19 @@
 // SCSS Variable's
-
 $font-primary: 'Poppins', sans-serif;
 
 $color-primary:#f8b833;
 $color-black:hsl(0, 0%, 0%);
-$color-white:hsl(0, 0%, 100%);
+$color-white:hsla(0, 0%, 100%, 1);
 
+// CSS Variables
 :root{
-    --primary-color: #ffffff;
+    /* hsl color code */
+    --color-primary: 0, 0%, 0%;
+    --color-secondary: 0, 0%, 100%;
+}
+
+.dark-layout{
+    /* hsl color code */
+    --color-primary: 0, 0%, 100%;
+    --color-secondary: 0, 0%, 0%;
 }

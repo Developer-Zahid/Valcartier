@@ -3,7 +3,9 @@
 	position: absolute;
 	top: 0;
 	z-index: 9;
-	background-color: unset;
+	background-color: transparent;
+	border-bottom: 1px solid transparent;
+	width: 100%;
 	@extend %transition;
 	.navbar{
 		&-toggler{
@@ -28,7 +30,7 @@
 				justify-content: center;
 				width: 50%;
 				height: 100vh;
-				background-color: lighten($color-black, $amount: 20);
+				background-color: color-secondary();
 				transition: transform ease-in-out .3s;
 				&.show{
 					transform: translateX(0);
@@ -46,79 +48,8 @@
 			}
 		}
 		.nav{
-			&-item{
-				.dropdown{
-					&-toggle{
-						@include min-desktop{
-							&::after{
-								display: none;
-							}
-						}
-					}
-					&-menu{
-						background-color: unset;
-						padding: toRem(5);
-						@extend %transition;
-						@include min-desktop{
-							display: block;
-							transform: translateY(40%);
-							opacity: 0;
-							visibility: hidden;
-							box-shadow: unset;
-							max-width: toRem(150);
-						}
-					}
-					&-item{
-						&:not(:last-child){
-							margin-bottom: toRem(5);
-						}
-						border-radius: inherit;
-						color: unset;
-						@extend %transition;
-						&.active,
-						&:active,
-						&:hover,
-						&:focus{
-							color: unset;
-							background-color: unset;
-						}
-					}
-				}
-				&.dropdown{
-					@include min-desktop{
-						&::before{
-							content: "";
-							position: absolute;
-							left: 0;
-							bottom: 0;
-							transform: translateY(100%);
-							width: 100%;
-							height: 100%;
-							cursor: pointer;
-							pointer-events: none;
-						}
-						&:hover,
-						&:focus{
-							&::before{
-								pointer-events: all;
-							}
-							.dropdown-menu{
-								transform: translateY(0);
-								opacity: 1;
-								visibility: visible;
-							}
-						}
-					}
-					&:hover,
-					&:focus{
-						.nav-link{
-							color: unset;
-						}
-					}
-				}
-			}
 			&-link{
-				color: unset;
+				color: color-primary();
 				font-size: 1rem;
 				font-weight: 400;
 				font-family: unset;
@@ -128,14 +59,7 @@
 				&.active,
 				&:hover,
 				&:focus-visible{
-					color: unset;
-				}
-				&:focus ~ .dropdown-menu{
-					@include min-desktop{
-						transform: translateY(0);
-						opacity: 1;
-						visibility: visible;
-					}
+					color: color-primary();
 				}
 			}
 		}
@@ -143,7 +67,9 @@
 	&--fixed{
 		position: fixed;
 		transform: translateY(-100%);
-		box-shadow: 0 3px 18px rgba($color-black, $alpha: 0.12);
+		background-color: color-secondary();
+		border-color: color-primary(0.2);
+		// box-shadow: 0 3px 18px color-primary(0.05);
 		animation: header_in .4s linear forwards;
 	}
 }
@@ -165,7 +91,7 @@
 	transform: translateX(100%);
 	width: 100%;
 	height: 100%;
-	background: rgba($color: #000000, $alpha: 0.5);
+	background: color-primary(0.5);
 	z-index: 8;
 	opacity: 0;
 	transition: opacity .4s ease .4s;

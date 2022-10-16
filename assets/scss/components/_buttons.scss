@@ -15,19 +15,16 @@
 }
 
 .scroll-top{
-	bottom: 3%;
-	right: 1%;
+	bottom: toRem(15);
+	right: toRem(15);
 	display: none;
 	cursor: pointer;
 	z-index: 7;
-	@include mobile{
-		bottom: 2%;
-	}
 	&__btn{
-		width: 2.8rem;
-		height: 2.8rem;
-		font-size: 1.1rem;
-		color: unset;
-		background: unset;
+		width: toRem(30);
+		height: toRem(30);
+		font-size: toRem(18);
+		color: color-secondary();
+		background: color-primary();
 	}
 }

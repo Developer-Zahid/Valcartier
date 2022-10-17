@@ -64,6 +64,47 @@
         $("html").removeClass("overflow-hidden");
     });
 
+	/* Dark Mode Toggler Function */
+	(function(){
+		const themeToggler = $(".theme-toggler");
+		let darkMode = localStorage.getItem("darkMode");
+
+		// Enable DarkMode Function
+		const enableDarkMode = () =>{
+			// 1. Add the class dark-mode to the html Element
+			$('html').addClass('dark-layout');
+			// 2. Add the class toggle to themeToggler
+			themeToggler.addClass("active");
+			// 3. Update darkMode in the localStorage
+			localStorage.setItem("darkMode", "enabled");
+		}
+
+		// Disable DarkMode Function
+		const disableDarkMode = () =>{
+			// 1. Remove the class dark-mode to the html Element
+			$('html').removeClass('dark-layout');
+			// 2. Remove the class toggle to themeToggler
+			themeToggler.removeClass("active");
+			// 3. Update lightMode in the localStorage
+			localStorage.setItem("darkMode", null);
+		}
+
+		// Check localStorage DarkMode value
+		if(darkMode === "enabled"){
+			enableDarkMode();
+		}
+
+		// Theme Change Event Functions
+		themeToggler.on("click", function(){
+			darkMode = localStorage.getItem("darkMode");
+			if(darkMode !== "enabled"){
+				enableDarkMode();
+			} else{
+				disableDarkMode();
+			}
+		})
+	})()
+
     /*  Banner slider */
     // $(".banner__slider").slick({
     //     slidesToShow: 1,
@@ -87,14 +128,6 @@
 	// 			}
 	// 		},
 	// 	]
-    // });
-
-    /* veno box */
-    // $('.venobox').venobox({
-    //     bgcolor    : '#ffffff',
-    //     spinner    : 'three-bounce',
-    //     border     : '10px',
-    //     frameheight: '82vh',
     // });
 
 })(jQuery);

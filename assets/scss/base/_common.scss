@@ -136,6 +136,34 @@ img{
 	}
 }
 
+.theme-toggler{
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	width: toRem(40);
+	height: toRem(23);
+	padding: toRem(4);
+	border: 0;
+	border-radius: 10rem;
+	background-color: color-primary();
+	
+	&__circle{
+		position: absolute;
+		display: inline-block;
+		width: toRem(15);
+		height: toRem(15);
+		border-radius: 50%;
+		background-color: color-secondary();
+		transition: transform .25s ease-in-out;
+	}
+
+	&.active{
+		.theme-toggler__circle{
+			transform: translateX(toRem(17));
+		}
+	}
+}
+
 /* Custom Container Style */
 .container{
 	@include min-desktop-lg{

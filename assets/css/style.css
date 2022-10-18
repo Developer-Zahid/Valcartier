@@ -3,16 +3,6 @@
 Template Name: Valcartier | Digital Marketing Services Type Website
 Version: 1.00
 ------------------
-
-----------------
-Table of Content
-----------------
-
-1.Google Fonts Link
-2.Typography Reset
-3.Reset CSS
-
-------------------
 */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 :root {
@@ -320,7 +310,20 @@ img {
 
 /* Common Section Gap Style */
 .section-gap {
-  padding: 5.9375rem 0;
+  padding: 3.125rem 0;
+}
+@media (min-width: 992px) {
+  .section-gap {
+    padding: 5.9375rem 0;
+  }
+}
+.section-gap--fix {
+  padding: 1.25rem 0;
+}
+@media (min-width: 992px) {
+  .section-gap--fix {
+    padding: 4.0625rem 0;
+  }
 }
 
 /* Common Section Heading Style */
@@ -330,7 +333,7 @@ img {
 }
 .section-header__title {
   color: currentColor;
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   font-weight: 700;
   line-height: 1;
   text-transform: capitalize;
@@ -342,10 +345,77 @@ img {
 }
 .section-header__sub-title {
   color: currentColor;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.55;
   letter-spacing: 16%;
   text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .section-header__sub-title {
+    font-size: 1.125rem;
+  }
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.4375rem;
+  text-transform: capitalize;
+}
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 1.75rem;
+    font-weight: 900;
+  }
+}
+.section-title__icon {
+  font-size: 2.375rem;
+  margin-right: 0.5rem;
+}
+@media (min-width: 768px) {
+  .section-title__icon {
+    font-size: 3rem;
+    margin-right: 0.9375rem;
+  }
+}
+
+.section__preview {
+  padding: 4.0625rem 0;
+}
+@media (min-width: 992px) {
+  .section__preview {
+    padding: 1.25rem 0;
+  }
+}
+@media (min-width: 1400px) {
+  .section__preview {
+    padding: 3.75rem 0;
+  }
+}
+.section__preview__image {
+  -webkit-animation: fly 2s linear infinite;
+          animation: fly 2s linear infinite;
+}
+@media (max-width: 1199.98px) {
+  .section__preview__image {
+    max-height: 18.75rem;
+  }
+}
+@-webkit-keyframes fly {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+@keyframes fly {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
 }
 
 /* Common Transition Style */
@@ -597,6 +667,11 @@ img {
   padding: 4.375rem 0;
 }
 @media (max-width: 991.98px) {
+  .banner {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 991.98px) {
   .banner__content {
     text-align: center;
   }
@@ -619,55 +694,96 @@ img {
 .banner__text {
   margin: 1.25rem 0;
 }
-.banner__preview {
-  padding: 4.0625rem 0;
-}
-@media (min-width: 992px) {
-  .banner__preview {
-    padding: 1.25rem 0;
-  }
-}
-@media (min-width: 1400px) {
-  .banner__preview {
-    padding: 3.75rem 0;
-  }
-}
-.banner__image {
-  -webkit-animation: fly 2s linear infinite;
-          animation: fly 2s linear infinite;
-}
-@media (max-width: 1199.98px) {
-  .banner__image {
-    max-height: 18.75rem;
-  }
-}
-@-webkit-keyframes fly {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-4px);
-  }
-}
-@keyframes fly {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-4px);
-  }
-}
 
 .features__list__item:not(:last-child) {
   margin-bottom: 2rem;
 }
 .features__list__title {
   color: hsla(var(--color-primary), 1);
-  font-size: 1.125rem;
-  font-weight: 900;
+  font-size: 1rem;
+  font-weight: 600;
   text-transform: capitalize;
   margin-bottom: 0.75rem;
 }
+@media (min-width: 768px) {
+  .features__list__title {
+    font-size: 1.125rem;
+    font-weight: 900;
+  }
+}
 .features__list__title__icon {
   margin-right: 0.4375rem;
+}
+
+.team__card {
+  padding-top: 1.875rem;
+}
+.team__card__header {
+  position: relative;
+  width: 13.34375rem;
+  height: 13.34375rem;
+  border: 2.2474px solid hsla(var(--color-primary), 1);
+  background-color: hsla(var(--color-primary), 1);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 1.25rem 1.25rem 5.625rem hsla(var(--color-primary), 0.2);
+}
+@media (max-width: 991.98px) {
+  .team__card__header {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.team__card__header__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.team__card__body {
+  padding-top: 2.5rem;
+}
+.team__card__body__title {
+  font-size: 1.75rem;
+  font-weight: 900;
+  margin-bottom: 1.5625rem;
+}
+@media (max-width: 991.98px) {
+  .team__card__body__title {
+    text-align: center;
+  }
+}
+
+.contact__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+@media (min-width: 768px) {
+  .contact__title {
+    font-size: 3.125rem;
+  }
+}
+@media (min-width: 1200px) {
+  .contact__title {
+    font-size: 6.125rem;
+  }
+}
+.contact__text {
+  margin-bottom: 1.25rem;
+}
+@media (min-width: 768px) {
+  .contact__text {
+    margin-bottom: 5.625rem;
+    font-size: 1.6875rem;
+  }
+}
+@media (min-width: 768px) {
+  .contact .primary-btn {
+    font-size: 1.75rem;
+    padding: 1.5625rem 4.375rem;
+  }
 }/*# sourceMappingURL=style.css.map */

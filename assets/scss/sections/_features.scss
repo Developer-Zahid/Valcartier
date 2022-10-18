@@ -5,10 +5,14 @@
         }
         &__title{
             color: color-primary();
-            font-size: toRem(18);
-            font-weight: 900;
+            font-size: toRem(16);
+            font-weight: 600;
             text-transform: capitalize;
             margin-bottom: toRem(12);
+            @include min-tablet{
+                font-size: toRem(18);
+                font-weight: 900;
+            }
 
             &__icon{
                 margin-right: toRem(7);

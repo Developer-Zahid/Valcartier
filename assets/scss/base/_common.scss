@@ -238,7 +238,16 @@ img{
 
 /* Common Section Gap Style */
 .section-gap{
-	padding: toRem(95) 0;
+	padding: toRem(50) 0;
+	@include min-desktop{
+		padding: toRem(95) 0;
+	}
+	&--fix{
+		padding: toRem(20) 0;
+		@include min-desktop{
+			padding: toRem(65) 0;
+		}
+	}
 }
 
 /* Common Section Heading Style */
@@ -247,7 +256,7 @@ img{
 	color: color-primary();
 	&__title{
 		color: currentColor;
-		font-size: toRem(30);
+		font-size: toRem(28);
 		font-weight: 700;
 		line-height: 1;
 		text-transform: capitalize;
@@ -257,9 +266,58 @@ img{
 	}
 	&__sub-title{
 		color: currentColor;
-		font-size: toRem(18);
+		font-size: toRem(16);
 		line-height: 1.55;
 		letter-spacing: 16%;
 		text-transform: uppercase;
+		@include min-tablet{
+			font-size: toRem(18);
+		}
 	}
+}
+
+.section-title{
+	font-size: toRem(20);
+	font-weight: 700;
+	margin-bottom: toRem(23);
+	text-transform: capitalize;
+	@include min-tablet{
+		font-size: toRem(28);
+		font-weight: 900;
+	}
+
+	&__icon{
+		font-size: toRem(38);
+		margin-right: toRem(8);
+		@include min-tablet{
+			font-size: toRem(48);
+			margin-right: toRem(15);
+		}
+	}
+}
+
+.section__preview{
+	padding: toRem(65) 0;
+	@include min-desktop{
+		padding: toRem(20) 0;
+	}
+	@include min-desktop-xl{
+		padding: toRem(60) 0;
+	}
+
+	&__image{
+        @include desktop-lg{
+            max-height: toRem(300);
+        }
+        animation: fly 2s linear infinite;
+
+        @keyframes fly {
+            0%, 100%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(-4px);
+            }
+        }
+    }
 }

@@ -1,0 +1,28 @@
+.contact{
+    &__title{
+        font-size: toRem(28);
+        font-weight: 700;
+        text-transform: capitalize;
+        @include min-tablet{
+            font-size: toRem(50);
+        }
+        @include min-desktop-lg{
+            font-size: toRem(98);
+        }
+    }
+
+    &__text{
+        margin-bottom: toRem(20);
+        @include min-tablet{
+            margin-bottom: toRem(90);
+            font-size: toRem(27);
+        }
+    }
+
+    .primary-btn{
+        @include min-tablet{
+            font-size: toRem(28);
+            padding: toRem(25) toRem(70);
+        }
+    }
+}

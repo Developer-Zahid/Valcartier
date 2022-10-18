@@ -1,6 +1,10 @@
 .banner{
     padding: toRem(70) 0;
 
+    @include desktop{
+        padding-bottom: 0;
+    }
+
     &__content{
         @include desktop{
             text-align: center;
@@ -22,34 +26,5 @@
 
     &__text{
         margin: toRem(20) 0;
-    }
-
-    &__preview{
-        padding: toRem(65) 0;
-
-        @include min-desktop{
-            padding: toRem(20) 0;
-        }
-
-        @include min-desktop-xl{
-            padding: toRem(60) 0;
-        }
-    }
-
-    &__image{
-        @include desktop-lg{
-            max-height: toRem(300);
-        }
-
-        animation: fly 2s linear infinite;
-
-        @keyframes fly {
-            0%, 100%{
-                transform: translateY(0);
-            }
-            50%{
-                transform: translateY(-4px);
-            }
-        }
     }
 }

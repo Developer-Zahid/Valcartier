@@ -1,0 +1,43 @@
+.team{
+    &__card{
+        padding-top: toRem(30);
+
+        &__header{
+            position: relative;
+            width: toRem(213.5);
+            height: toRem(213.5);
+            border: 2.2474px solid color-primary();
+            background-color: color-primary();
+            border-radius: 50%;
+            @include desktop{
+                margin-left: auto;
+                margin-right: auto;
+            }
+            overflow: hidden;
+            box-shadow: toRem(20) toRem(20) toRem(90) color-primary(0.2);
+
+            &__image{
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__body{
+            padding-top: toRem(40);
+
+            &__title{
+                font-size: toRem(28);
+                font-weight: 900;
+                margin-bottom: toRem(25);
+                @include desktop{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

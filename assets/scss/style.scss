@@ -3,16 +3,6 @@
 Template Name: Valcartier | Digital Marketing Services Type Website
 Version: 1.00
 ------------------
-
-----------------
-Table of Content
-----------------
-
-1.Google Fonts Link
-2.Typography Reset
-3.Reset CSS
-
-------------------
 */
 
 @import "./abstracts/variable";
@@ -26,3 +16,5 @@ Table of Content
 @import "./layout/footer";
 @import "./sections/banner";
 @import "./sections/features";
+@import "./sections/teams";
+@import "./sections/contact";

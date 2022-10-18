@@ -71,6 +71,10 @@ img{
 	}
 }
 
+.overflow-x-hidden{
+	overflow-x: hidden;
+}
+
 .dark-layout .layout-match-logo{
 	filter: invert(1);
 }
@@ -234,32 +238,28 @@ img{
 
 /* Common Section Gap Style */
 .section-gap{
-	padding: 6rem 0;
-	@include desktop{
-		padding: 3rem 0;
-	}
-	&--fix{
-		padding-bottom: calc(6rem - 30px);
-		@include desktop{
-			padding-bottom: calc(3rem - 30px);
-		}
-	}
+	padding: toRem(95) 0;
 }
 
 /* Common Section Heading Style */
 .section-header{
-	margin-bottom: toRem(50);
-	@include mobile{
-		margin-bottom: toRem(30);
-	}
+	margin-bottom: toRem(32);
+	color: color-primary();
 	&__title{
-		font-size: toRem(40);
-		font-family: unset;
-		@include tablet{
-			font-size: toRem(30);
+		color: currentColor;
+		font-size: toRem(30);
+		font-weight: 700;
+		line-height: 1;
+		text-transform: capitalize;
+		@include min-tablet{
+			font-size: toRem(48);
 		}
-		@include mobile{
-			font-size: toRem(26);
-		}
+	}
+	&__sub-title{
+		color: currentColor;
+		font-size: toRem(18);
+		line-height: 1.55;
+		letter-spacing: 16%;
+		text-transform: uppercase;
 	}
 }

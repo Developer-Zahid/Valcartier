@@ -1,0 +1,18 @@
+.features{
+    &__list{
+        &__item:not(:last-child){
+            margin-bottom: toRem(32);
+        }
+        &__title{
+            color: color-primary();
+            font-size: toRem(18);
+            font-weight: 900;
+            text-transform: capitalize;
+            margin-bottom: toRem(12);
+
+            &__icon{
+                margin-right: toRem(7);
+            }
+        }
+    }
+}

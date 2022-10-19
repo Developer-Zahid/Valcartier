@@ -1,4 +1,9 @@
 .features{
+    .section-icon{
+        top: 8%;
+        left: 2%;
+    }
+
     &__list{
         &__item:not(:last-child){
             margin-bottom: toRem(32);

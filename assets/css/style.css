@@ -332,10 +332,15 @@ img {
 }
 .section-header__sub-title {
   color: currentColor;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.55;
   letter-spacing: 16%;
   text-transform: uppercase;
+}
+@media (min-width: 576px) {
+  .section-header__sub-title {
+    font-size: 1rem;
+  }
 }
 @media (min-width: 768px) {
   .section-header__sub-title {
@@ -406,6 +411,48 @@ img {
   50% {
     -webkit-transform: translateY(-4px);
             transform: translateY(-4px);
+  }
+}
+
+.section-icon {
+  position: absolute;
+  z-index: -1;
+  color: hsla(var(--color-primary), 1);
+  font-size: 1.5rem;
+  -webkit-animation: star_rotate 30s linear infinite;
+          animation: star_rotate 30s linear infinite;
+}
+@media (min-width: 576px) {
+  .section-icon {
+    font-size: 3rem;
+  }
+}
+.section-icon--lg {
+  font-size: 2rem;
+}
+@media (min-width: 576px) {
+  .section-icon--lg {
+    font-size: 4rem;
+  }
+}
+@-webkit-keyframes star_rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes star_rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -688,11 +735,27 @@ img {
   }
 }
 
-.banner {
+.banner .section-icon--left {
+  top: 2%;
+  left: 2%;
+}
+.banner .section-icon--right {
+  top: 2%;
+  right: 2%;
+}
+.banner .section-icon--bottom-right {
+  bottom: 5%;
+  right: 35%;
+}
+.banner .section-icon--btn {
+  top: -30%;
+  right: -30%;
+}
+.banner .section-wrapper {
   padding: 4.375rem 0;
 }
 @media (max-width: 991.98px) {
-  .banner {
+  .banner .section-wrapper {
     padding-bottom: 0;
   }
 }
@@ -719,7 +782,14 @@ img {
 .banner__text {
   margin: 1.25rem 0;
 }
+.banner .primary-btn {
+  position: relative;
+}
 
+.features .section-icon {
+  top: 8%;
+  left: 2%;
+}
 .features__list__item:not(:last-child) {
   margin-bottom: 2rem;
 }
@@ -740,6 +810,19 @@ img {
   margin-right: 0.4375rem;
 }
 
+.advatnages .section-icon {
+  top: 6%;
+  right: 2%;
+}
+
+.team .section-icon--top {
+  top: 15%;
+  right: 10%;
+}
+.team .section-icon--bottom {
+  bottom: 2%;
+  right: 2%;
+}
 .team__card {
   padding-top: 1.875rem;
 }
@@ -783,6 +866,10 @@ img {
   }
 }
 
+.contact .section-icon {
+  top: 6%;
+  left: 2%;
+}
 .contact__title {
   font-size: 1.75rem;
   font-weight: 700;
@@ -814,6 +901,14 @@ img {
   }
 }
 
+.testimonial .section-icon--right {
+  top: -3%;
+  right: 20%;
+}
+.testimonial .section-icon--left {
+  bottom: 2%;
+  left: 2%;
+}
 @media (min-width: 992px) {
   .testimonial .section-header {
     padding-bottom: 3.125rem;

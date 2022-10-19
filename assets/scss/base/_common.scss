@@ -220,10 +220,13 @@ img{
 	}
 	&__sub-title{
 		color: currentColor;
-		font-size: toRem(16);
+		font-size: toRem(14);
 		line-height: 1.55;
 		letter-spacing: 16%;
 		text-transform: uppercase;
+		@include min-mobile{
+			font-size: toRem(16);
+		}
 		@include min-tablet{
 			font-size: toRem(18);
 		}
@@ -274,4 +277,34 @@ img{
             }
         }
     }
+}
+
+.section-icon{
+	position: absolute;
+	z-index: -1;
+	color: color-primary();
+
+	font-size: toRem(24);
+	@include min-mobile{
+		font-size: toRem(48);
+	}
+
+	&--lg{
+		font-size: toRem(32);
+        @include min-mobile{
+            font-size: toRem(64);
+        }
+	}
+
+
+	animation: star_rotate 30s linear infinite;
+	
+	@keyframes star_rotate {
+		0%{
+			transform: rotate(0deg);
+		}
+		100%{
+			transform: rotate(360deg);
+		}
+	}
 }

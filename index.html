@@ -72,11 +72,17 @@
 	<div class="offCanvasMenuCloser position-fixed" data-toggle="collapse" data-target="#navbarSupportedContent" role="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></div>
 
 	<!-- Banner Section -->
-	<section id="banner" class="banner overflow-x-hidden">
-		<svg width="1em" height="1em" viewBox="0 0 62 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<section id="banner" class="banner position-relative">
+		<svg class="section-icon section-icon--left user-select-none" width="1em" height="1em" viewBox="0 0 62 58" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M31 0L32.5047 29.9289L61.4338 22.1115L33.4347 32.7911L49.8091 57.8885L31 34.56L12.1909 57.8885L28.5653 32.7911L0.566191 22.1115L29.4953 29.9289L31 0Z" fill="currentColor"/>
 		</svg>
-		<div class="section-wrapper">
+		<svg class="section-icon section-icon--lg section-icon--right user-select-none" width="1em" height="1em" viewBox="0 0 62 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M31 0L32.5047 29.9289L61.4338 22.1115L33.4347 32.7911L49.8091 57.8885L31 34.56L12.1909 57.8885L28.5653 32.7911L0.566191 22.1115L29.4953 29.9289L31 0Z" fill="currentColor"/>
+		</svg>
+		<svg class="section-icon section-icon--bottom-right user-select-none" width="1em" height="1em" viewBox="0 0 62 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M31 0L32.5047 29.9289L61.4338 22.1115L33.4347 32.7911L49.8091 57.8885L31 34.56L12.1909 57.8885L28.5653 32.7911L0.566191 22.1115L29.4953 29.9289L31 0Z" fill="currentColor"/>
+		</svg>
+		<div class="section-wrapper overflow-x-hidden">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-6 banner__content mb-5 mb-lg-0">
@@ -86,6 +92,10 @@
 							<span class="primary-btn__text">Get started</span>
 							<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="primary-btn__icon" viewBox="0 0 16 16">
 								<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+							</svg>
+
+							<svg class="section-icon section-icon--btn user-select-none" width="1em" height="1em" viewBox="0 0 62 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M31 0L32.5047 29.9289L61.4338 22.1115L33.4347 32.7911L49.8091 57.8885L31 34.56L12.1909 57.8885L28.5653 32.7911L0.566191 22.1115L29.4953 29.9289L31 0Z" fill="currentColor"/>
 							</svg>
 						</a>
 					</div>
@@ -101,83 +111,93 @@
 	</section>
 
 	<!-- Features Section -->
-	<section id="features" class="section-gap overflow-x-hidden">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 text-center">
-					<div class="section__preview ribbon user-select-none">
-						<div class="ribbon__circle"></div>
-						<img src="./assets/images/sections/feature-image.png" alt="Mike in a hand" class="section__preview__image">
+	<section id="features" class="features position-relative">
+		<svg class="section-icon user-select-none" width="1em" height="1em" viewBox="0 0 62 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M31 0L32.5047 29.9289L61.4338 22.1115L33.4347 32.7911L49.8091 57.8885L31 34.56L12.1909 57.8885L28.5653 32.7911L0.566191 22.1115L29.4953 29.9289L31 0Z" fill="currentColor"/>
+		</svg>
+		<div class="section-gap overflow-x-hidden">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 text-center">
+						<div class="section__preview ribbon user-select-none">
+							<div class="ribbon__circle"></div>
+							<img src="./assets/images/sections/feature-image.png" alt="Mike in a hand" class="section__preview__image">
+						</div>
 					</div>
-				</div>
-				<div class="col-lg-6 section__content">
-					<div class="section-header">
-						<h2 class="section-header__sub-title">Features</h3>
-						<h1 class="section-header__title">What We Offer</h1>
+					<div class="col-lg-6 section__content">
+						<div class="section-header">
+							<h2 class="section-header__sub-title">Features</h3>
+							<h1 class="section-header__title">What We Offer</h1>
+						</div>
+						<ul class="features__list">
+							<li class="features__list__item">
+								<h3 class="features__list__title">
+									<span class="features__list__title__icon">
+										<svg width="1em" height="1em" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M11 1L9.6985 6.20599C9.44454 7.22185 9.31756 7.72978 9.05308 8.14309C8.81915 8.50868 8.50868 8.81915 8.14309 9.05308C7.72978 9.31756 7.22185 9.44454 6.20599 9.6985L1 11L6.20599 12.3015C7.22185 12.5555 7.72978 12.6824 8.14309 12.9469C8.50868 13.1808 8.81915 13.4913 9.05309 13.8569C9.31756 14.2702 9.44454 14.7782 9.6985 15.794L11 21L12.3015 15.794C12.5555 14.7782 12.6824 14.2702 12.9469 13.8569C13.1808 13.4913 13.4913 13.1808 13.8569 12.9469C14.2702 12.6824 14.7782 12.5555 15.794 12.3015L21 11L15.794 9.6985C14.7782 9.44454 14.2702 9.31756 13.8569 9.05308C13.4913 8.81915 13.1808 8.50868 12.9469 8.14309C12.6824 7.72978 12.5555 7.22185 12.3015 6.20599L11 1Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</span>
+									Content Creation
+								</h3>
+								<p>Our bespoke team of designers can create the highest-quality content to ensure a strong communication to the client!</p>
+							</li>
+							<li class="features__list__item">
+								<h3 class="features__list__title">
+									<span class="features__list__title__icon">
+										<svg width="1em" height="1em" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M10 1.49996V11M10 11L18.5 6.27767M10 11L1.5 6.27767M10 11V20.5M18.5 15.7222L10.777 11.4316C10.4934 11.2741 10.3516 11.1953 10.2015 11.1644C10.0685 11.1371 9.93146 11.1371 9.79855 11.1644C9.64838 11.1953 9.50658 11.2741 9.22297 11.4316L1.5 15.7222M19 15.0585V6.94141C19 6.59876 19 6.42744 18.9495 6.27464C18.9049 6.13947 18.8318 6.01539 18.7354 5.9107C18.6263 5.79236 18.4766 5.70916 18.177 5.54276L10.777 1.43164C10.4934 1.27409 10.3516 1.19531 10.2015 1.16442C10.0685 1.13709 9.93146 1.13709 9.79855 1.16442C9.64838 1.19531 9.50658 1.27409 9.22297 1.43165L1.82297 5.54276C1.52345 5.70916 1.37369 5.79236 1.26463 5.9107C1.16816 6.01539 1.09515 6.13947 1.05048 6.27465C1 6.42745 1 6.59877 1 6.94141V15.0585C1 15.4012 1 15.5725 1.05048 15.7253C1.09515 15.8605 1.16816 15.9845 1.26463 16.0892C1.37369 16.2076 1.52345 16.2908 1.82297 16.4572L9.22297 20.5683C9.50658 20.7258 9.64838 20.8046 9.79855 20.8355C9.93146 20.8628 10.0685 20.8628 10.2015 20.8355C10.3516 20.8046 10.4934 20.7258 10.777 20.5683L18.177 16.4572C18.4766 16.2908 18.6263 16.2076 18.7354 16.0892C18.8318 15.9845 18.9049 15.8605 18.9495 15.7253C19 15.5725 19 15.4012 19 15.0585Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</span>
+									Social media management
+								</h3>
+								<p>with our expertise across numerous social media platforms, We Can Ensure You Reach Your Target Audience On Social Media.</p>
+							</li>
+							<li class="features__list__item">
+								<h3 class="features__list__title">
+									<span class="features__list__title__icon">
+										<svg width="1em" height="1em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M18.5 14H6M6 14V1.5M6 14L1.5 18.5M1.5 6H14M14 6V18.5M14 6L18.5 1.5M19 13.3373V1.8C19 1.51997 19 1.37996 18.9455 1.273C18.8976 1.17892 18.8211 1.10243 18.727 1.0545C18.62 1 18.48 1 18.2 1H6.66274C6.41815 1 6.29586 1 6.18077 1.02763C6.07873 1.05213 5.98119 1.09253 5.89172 1.14736C5.7908 1.2092 5.70432 1.29568 5.53137 1.46863L1.46863 5.53137C1.29568 5.70432 1.2092 5.7908 1.14736 5.89172C1.09253 5.98119 1.05213 6.07873 1.02763 6.18077C1 6.29586 1 6.41815 1 6.66274V18.2C1 18.48 1 18.62 1.0545 18.727C1.10243 18.8211 1.17892 18.8976 1.273 18.9455C1.37996 19 1.51997 19 1.8 19H13.3373C13.5818 19 13.7041 19 13.8192 18.9724C13.9213 18.9479 14.0188 18.9075 14.1083 18.8526C14.2092 18.7908 14.2957 18.7043 14.4686 18.5314L18.5314 14.4686C18.7043 14.2957 18.7908 14.2092 18.8526 14.1083C18.9075 14.0188 18.9479 13.9213 18.9724 13.8192C19 13.7041 19 13.5818 19 13.3373Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</span>
+									Marketing Methods
+								</h3>
+								<p>consiting of 10+ methods of marketing, we’ll determine the most efficient methods to get your brand recognised.</p>
+							</li>
+						</ul>
 					</div>
-					<ul class="features__list">
-						<li class="features__list__item">
-							<h3 class="features__list__title">
-								<span class="features__list__title__icon">
-									<svg width="1em" height="1em" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M11 1L9.6985 6.20599C9.44454 7.22185 9.31756 7.72978 9.05308 8.14309C8.81915 8.50868 8.50868 8.81915 8.14309 9.05308C7.72978 9.31756 7.22185 9.44454 6.20599 9.6985L1 11L6.20599 12.3015C7.22185 12.5555 7.72978 12.6824 8.14309 12.9469C8.50868 13.1808 8.81915 13.4913 9.05309 13.8569C9.31756 14.2702 9.44454 14.7782 9.6985 15.794L11 21L12.3015 15.794C12.5555 14.7782 12.6824 14.2702 12.9469 13.8569C13.1808 13.4913 13.4913 13.1808 13.8569 12.9469C14.2702 12.6824 14.7782 12.5555 15.794 12.3015L21 11L15.794 9.6985C14.7782 9.44454 14.2702 9.31756 13.8569 9.05308C13.4913 8.81915 13.1808 8.50868 12.9469 8.14309C12.6824 7.72978 12.5555 7.22185 12.3015 6.20599L11 1Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-								</span>
-								Content Creation
-							</h3>
-							<p>Our bespoke team of designers can create the highest-quality content to ensure a strong communication to the client!</p>
-						</li>
-						<li class="features__list__item">
-							<h3 class="features__list__title">
-								<span class="features__list__title__icon">
-									<svg width="1em" height="1em" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M10 1.49996V11M10 11L18.5 6.27767M10 11L1.5 6.27767M10 11V20.5M18.5 15.7222L10.777 11.4316C10.4934 11.2741 10.3516 11.1953 10.2015 11.1644C10.0685 11.1371 9.93146 11.1371 9.79855 11.1644C9.64838 11.1953 9.50658 11.2741 9.22297 11.4316L1.5 15.7222M19 15.0585V6.94141C19 6.59876 19 6.42744 18.9495 6.27464C18.9049 6.13947 18.8318 6.01539 18.7354 5.9107C18.6263 5.79236 18.4766 5.70916 18.177 5.54276L10.777 1.43164C10.4934 1.27409 10.3516 1.19531 10.2015 1.16442C10.0685 1.13709 9.93146 1.13709 9.79855 1.16442C9.64838 1.19531 9.50658 1.27409 9.22297 1.43165L1.82297 5.54276C1.52345 5.70916 1.37369 5.79236 1.26463 5.9107C1.16816 6.01539 1.09515 6.13947 1.05048 6.27465C1 6.42745 1 6.59877 1 6.94141V15.0585C1 15.4012 1 15.5725 1.05048 15.7253C1.09515 15.8605 1.16816 15.9845 1.26463 16.0892C1.37369 16.2076 1.52345 16.2908 1.82297 16.4572L9.22297 20.5683C9.50658 20.7258 9.64838 20.8046 9.79855 20.8355C9.93146 20.8628 10.0685 20.8628 10.2015 20.8355C10.3516 20.8046 10.4934 20.7258 10.777 20.5683L18.177 16.4572C18.4766 16.2908 18.6263 16.2076 18.7354 16.0892C18.8318 15.9845 18.9049 15.8605 18.9495 15.7253C19 15.5725 19 15.4012 19 15.0585Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-								</span>
-								Social media management
-							</h3>
-							<p>with our expertise across numerous social media platforms, We Can Ensure You Reach Your Target Audience On Social Media.</p>
-						</li>
-						<li class="features__list__item">
-							<h3 class="features__list__title">
-								<span class="features__list__title__icon">
-									<svg width="1em" height="1em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M18.5 14H6M6 14V1.5M6 14L1.5 18.5M1.5 6H14M14 6V18.5M14 6L18.5 1.5M19 13.3373V1.8C19 1.51997 19 1.37996 18.9455 1.273C18.8976 1.17892 18.8211 1.10243 18.727 1.0545C18.62 1 18.48 1 18.2 1H6.66274C6.41815 1 6.29586 1 6.18077 1.02763C6.07873 1.05213 5.98119 1.09253 5.89172 1.14736C5.7908 1.2092 5.70432 1.29568 5.53137 1.46863L1.46863 5.53137C1.29568 5.70432 1.2092 5.7908 1.14736 5.89172C1.09253 5.98119 1.05213 6.07873 1.02763 6.18077C1 6.29586 1 6.41815 1 6.66274V18.2C1 18.48 1 18.62 1.0545 18.727C1.10243 18.8211 1.17892 18.8976 1.273 18.9455C1.37996 19 1.51997 19 1.8 19H13.3373C13.5818 19 13.7041 19 13.8192 18.9724C13.9213 18.9479 14.0188 18.9075 14.1083 18.8526C14.2092 18.7908 14.2957 18.7043 14.4686 18.5314L18.5314 14.4686C18.7043 14.2957 18.7908 14.2092 18.8526 14.1083C18.9075 14.0188 18.9479 13.9213 18.9724 13.8192C19 13.7041 19 13.5818 19 13.3373Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-								</span>
-								Marketing Methods
-							</h3>
-							<p>consiting of 10+ methods of marketing, we’ll determine the most efficient methods to get your brand recognised.</p>
-						</li>
-					</ul>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- Advatnages Section -->
-	<section id="advatnages" class="section-gap overflow-x-hidden">
-		<div class="container">
-			<div class="row flex-lg-row-reverse">
-				<div class="col-lg-6 text-center">
-					<div class="section__preview ribbon user-select-none">
-						<div class="ribbon__circle"></div>
-						<img src="./assets/images/sections/advantages-image.png" alt="List Board" class="section__preview__image">
+	<section id="advatnages" class="advatnages position-relative">
+		<svg class="section-icon section-icon--lg user-select-none" width="1em" height="1em" viewBox="0 0 62 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M31 0L32.5047 29.9289L61.4338 22.1115L33.4347 32.7911L49.8091 57.8885L31 34.56L12.1909 57.8885L28.5653 32.7911L0.566191 22.1115L29.4953 29.9289L31 0Z" fill="currentColor"/>
+		</svg>
+		<div class="section-gap overflow-x-hidden">
+			<div class="container">
+				<div class="row flex-lg-row-reverse">
+					<div class="col-lg-6 text-center">
+						<div class="section__preview ribbon user-select-none">
+							<div class="ribbon__circle"></div>
+							<img src="./assets/images/sections/advantages-image.png" alt="List Board" class="section__preview__image">
+						</div>
 					</div>
-				</div>
-				<div class="col-lg-6 section__content">
-					<div class="section-header">
-						<h2 class="section-header__sub-title">Advatnages</h3>
-						<h1 class="section-header__title">Why choose Valcartier?</h1>
+					<div class="col-lg-6 section__content">
+						<div class="section-header">
+							<h2 class="section-header__sub-title">Advatnages</h3>
+							<h1 class="section-header__title">Why choose Valcartier?</h1>
+						</div>
+						<h3 class="section-title">
+							<svg class="section-title__icon" width="1em" height="1em" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="24" cy="24.488" r="23.5" stroke="currentColor"/>
+								<path d="M26 33.488H22M30 20.488C30 18.8967 29.3679 17.3706 28.2427 16.2454C27.1174 15.1202 25.5913 14.488 24 14.488C22.4087 14.488 20.8826 15.1202 19.7574 16.2454C18.6322 17.3706 18 18.8967 18 20.488C18 23.5782 17.2205 25.694 16.3497 27.0934C15.6151 28.2739 15.2479 28.8641 15.2613 29.0288C15.2763 29.2111 15.3149 29.2806 15.4618 29.3896C15.5945 29.488 16.1926 29.488 17.3889 29.488H30.6112C31.8074 29.488 32.4056 29.488 32.5382 29.3896C32.6852 29.2806 32.7238 29.2111 32.7387 29.0288C32.7522 28.8641 32.3849 28.2739 31.6504 27.0935C30.7795 25.694 30 23.5782 30 20.488Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							Results
+						</h3>
+						<p>want results? we’ve got it! with over 2M+ followers, 50M+ views & 250K+ conversions within the last 5 years, we’ve ensured that we provide a premium service.</p>
 					</div>
-					<h3 class="section-title">
-						<svg class="section-title__icon" width="1em" height="1em" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<circle cx="24" cy="24.488" r="23.5" stroke="currentColor"/>
-							<path d="M26 33.488H22M30 20.488C30 18.8967 29.3679 17.3706 28.2427 16.2454C27.1174 15.1202 25.5913 14.488 24 14.488C22.4087 14.488 20.8826 15.1202 19.7574 16.2454C18.6322 17.3706 18 18.8967 18 20.488C18 23.5782 17.2205 25.694 16.3497 27.0934C15.6151 28.2739 15.2479 28.8641 15.2613 29.0288C15.2763 29.2111 15.3149 29.2806 15.4618 29.3896C15.5945 29.488 16.1926 29.488 17.3889 29.488H30.6112C31.8074 29.488 32.4056 29.488 32.5382 29.3896C32.6852 29.2806 32.7238 29.2111 32.7387 29.0288C32.7522 28.8641 32.3849 28.2739 31.6504 27.0935C30.7795 25.694 30 23.5782 30 20.488Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
-						Results
-					</h3>
-					<p>want results? we’ve got it! with over 2M+ followers, 50M+ views & 250K+ conversions within the last 5 years, we’ve ensured that we provide a premium service.</p>
 				</div>
 			</div>
 		</div>
@@ -208,54 +228,62 @@
 	</section>
 
 	<!-- Testimonials Section -->
-	<section id="testimonials" class="testimonial section-gap overflow-x-hidden">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-12 section-header text-center">
-					<h2 class="section-header__sub-title">Testimonial</h3>
-					<h1 class="section-header__title">What our Clients Think</h1>
-				</div>
-				<div class="col-lg-7 text-center">
-					<div class="section__preview ribbon">
-						<div class="ribbon__circle"></div>
-						<div class="testimonial__slider__nav"></div>
+	<section id="testimonials" class="testimonial position-relative">
+		<svg class="section-icon section-icon--lg section-icon--right user-select-none" width="1em" height="1em" viewBox="0 0 62 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M31 0L32.5047 29.9289L61.4338 22.1115L33.4347 32.7911L49.8091 57.8885L31 34.56L12.1909 57.8885L28.5653 32.7911L0.566191 22.1115L29.4953 29.9289L31 0Z" fill="currentColor"/>
+		</svg>
+		<svg class="section-icon section-icon--left user-select-none" width="1em" height="1em" viewBox="0 0 62 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M31 0L32.5047 29.9289L61.4338 22.1115L33.4347 32.7911L49.8091 57.8885L31 34.56L12.1909 57.8885L28.5653 32.7911L0.566191 22.1115L29.4953 29.9289L31 0Z" fill="currentColor"/>
+		</svg>
+		<div class="section-gap overflow-x-hidden">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-12 section-header text-center">
+						<h2 class="section-header__sub-title">Testimonial</h3>
+						<h1 class="section-header__title">What our Clients Think</h1>
 					</div>
-				</div>
-				<div class="col-lg-5 section__content">
-					<div class="testimonial__slider">
-						<div class="testimonial__slide" data-client-image="./assets/images/clients/client-1.png">
-							<div class="testimonial__card">
-								<h3 class="section-title">the best Marketing Service, Period.</h3>
-								<p class="testimonial__card__text">We pride ourselves in having personalised mobile marketing content. we ensure that the product we produce each time sets a new standard, constantly increasing the quality of your online presence.</p>
-								<h4 class="testimonial__card__title">Humza Jalil</h4>
-							</div>
+					<div class="col-lg-7 text-center">
+						<div class="section__preview ribbon">
+							<div class="ribbon__circle"></div>
+							<div class="testimonial__slider__nav"></div>
 						</div>
-						<div class="testimonial__slide" data-client-image="./assets/images/clients/client-2.png">
-							<div class="testimonial__card">
-								<h3 class="section-title">the best Marketing Service, Period. (2)</h3>
-								<p class="testimonial__card__text">(2) We pride ourselves in having personalised mobile marketing content. we ensure that the product we produce each time sets a new standard, constantly increasing the quality of your online presence.</p>
-								<h4 class="testimonial__card__title">Humza Jalil (2)</h4>
+					</div>
+					<div class="col-lg-5 section__content">
+						<div class="testimonial__slider">
+							<div class="testimonial__slide" data-client-image="./assets/images/clients/client-1.png">
+								<div class="testimonial__card">
+									<h3 class="section-title">the best Marketing Service, Period.</h3>
+									<p class="testimonial__card__text">We pride ourselves in having personalised mobile marketing content. we ensure that the product we produce each time sets a new standard, constantly increasing the quality of your online presence.</p>
+									<h4 class="testimonial__card__title">Humza Jalil</h4>
+								</div>
 							</div>
-						</div>
-						<div class="testimonial__slide" data-client-image="./assets/images/clients/client-3.png">
-							<div class="testimonial__card">
-								<h3 class="section-title">the best Marketing Service, Period. (3)</h3>
-								<p class="testimonial__card__text">(3) We pride ourselves in having personalised mobile marketing content. we ensure that the product we produce each time sets a new standard, constantly increasing the quality of your online presence.</p>
-								<h4 class="testimonial__card__title">Humza Jalil (3)</h4>
+							<div class="testimonial__slide" data-client-image="./assets/images/clients/client-2.png">
+								<div class="testimonial__card">
+									<h3 class="section-title">the best Marketing Service, Period. (2)</h3>
+									<p class="testimonial__card__text">(2) We pride ourselves in having personalised mobile marketing content. we ensure that the product we produce each time sets a new standard, constantly increasing the quality of your online presence.</p>
+									<h4 class="testimonial__card__title">Humza Jalil (2)</h4>
+								</div>
 							</div>
-						</div>
-						<div class="testimonial__slide" data-client-image="./assets/images/clients/client-4.png">
-							<div class="testimonial__card">
-								<h3 class="section-title">the best Marketing Service, Period. (4)</h3>
-								<p class="testimonial__card__text">(4) We pride ourselves in having personalised mobile marketing content. we ensure that the product we produce each time sets a new standard, constantly increasing the quality of your online presence.</p>
-								<h4 class="testimonial__card__title">Humza Jalil (4)</h4>
+							<div class="testimonial__slide" data-client-image="./assets/images/clients/client-3.png">
+								<div class="testimonial__card">
+									<h3 class="section-title">the best Marketing Service, Period. (3)</h3>
+									<p class="testimonial__card__text">(3) We pride ourselves in having personalised mobile marketing content. we ensure that the product we produce each time sets a new standard, constantly increasing the quality of your online presence.</p>
+									<h4 class="testimonial__card__title">Humza Jalil (3)</h4>
+								</div>
 							</div>
-						</div>
-						<div class="testimonial__slide" data-client-image="./assets/images/clients/client-5.png">
-							<div class="testimonial__card">
-								<h3 class="section-title">the best Marketing Service, Period. (5)</h3>
-								<p class="testimonial__card__text">(5) We pride ourselves in having personalised mobile marketing content. we ensure that the product we produce each time sets a new standard, constantly increasing the quality of your online presence.</p>
-								<h4 class="testimonial__card__title">Humza Jalil (5)</h4>
+							<div class="testimonial__slide" data-client-image="./assets/images/clients/client-4.png">
+								<div class="testimonial__card">
+									<h3 class="section-title">the best Marketing Service, Period. (4)</h3>
+									<p class="testimonial__card__text">(4) We pride ourselves in having personalised mobile marketing content. we ensure that the product we produce each time sets a new standard, constantly increasing the quality of your online presence.</p>
+									<h4 class="testimonial__card__title">Humza Jalil (4)</h4>
+								</div>
+							</div>
+							<div class="testimonial__slide" data-client-image="./assets/images/clients/client-5.png">
+								<div class="testimonial__card">
+									<h3 class="section-title">the best Marketing Service, Period. (5)</h3>
+									<p class="testimonial__card__text">(5) We pride ourselves in having personalised mobile marketing content. we ensure that the product we produce each time sets a new standard, constantly increasing the quality of your online presence.</p>
+									<h4 class="testimonial__card__title">Humza Jalil (5)</h4>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -265,43 +293,51 @@
 	</section>
 
 	<!-- Team Section -->
-	<section id="team" class="team section-gap">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-12 section-header text-center">
-					<h2 class="section-header__sub-title">Founders</h3>
-					<h1 class="section-header__title">Meet the team</h1>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="team__card">
-						<div class="team__card__header user-select-none">
-							<img src="./assets/images/teams/team-member-1.png" alt="A team member" class="team__card__header__image">
-						</div>
-						<div class="team__card__body">
-							<h3 class="team__card__body__title">Jordan</h3>
-							<p>Hello, my name is Jordan I have 4 years of video and audio editing experience working for CFRH radio station which I have used to my advantage on social media to generate over 4 million views. Using these acquired skills I will provide you with professional editing to market your products, and services and manage your account to generate new clients.</p>
+	<section id="team" class="team position-relative">
+		<svg class="section-icon section-icon--lg section-icon--top user-select-none" width="1em" height="1em" viewBox="0 0 62 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M31 0L32.5047 29.9289L61.4338 22.1115L33.4347 32.7911L49.8091 57.8885L31 34.56L12.1909 57.8885L28.5653 32.7911L0.566191 22.1115L29.4953 29.9289L31 0Z" fill="currentColor"/>
+		</svg>
+		<svg class="section-icon section-icon--lg section-icon--bottom user-select-none" width="1em" height="1em" viewBox="0 0 62 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M31 0L32.5047 29.9289L61.4338 22.1115L33.4347 32.7911L49.8091 57.8885L31 34.56L12.1909 57.8885L28.5653 32.7911L0.566191 22.1115L29.4953 29.9289L31 0Z" fill="currentColor"/>
+		</svg>
+		<div class="section-gap">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 section-header text-center">
+						<h2 class="section-header__sub-title">Founders</h3>
+						<h1 class="section-header__title">Meet the team</h1>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="team__card">
+							<div class="team__card__header user-select-none">
+								<img src="./assets/images/teams/team-member-1.png" alt="A team member" class="team__card__header__image">
+							</div>
+							<div class="team__card__body">
+								<h3 class="team__card__body__title">Jordan</h3>
+								<p>Hello, my name is Jordan I have 4 years of video and audio editing experience working for CFRH radio station which I have used to my advantage on social media to generate over 4 million views. Using these acquired skills I will provide you with professional editing to market your products, and services and manage your account to generate new clients.</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="team__card">
-						<div class="team__card__header user-select-none">
-							<img src="./assets/images/teams/team-member-2.png" alt="A team member" class="team__card__header__image">
-						</div>
-						<div class="team__card__body">
-							<h3 class="team__card__body__title">Jaden</h3>
-							<p>Hi my name is Jaden Carducci, I’ve made thousands of dollars of revenue for many different companies  some of them are: CrosshairCooks,   TheSpinDriftBoard, TheFinestSupply and many more. I have over 3+ years in experience with content creation, social media  marketing, and post production softwares. Im looking forward to working with you and you’re business and you cannot go wrong with choosing Valcartier.</p>
+					<div class="col-lg-4 col-md-6">
+						<div class="team__card">
+							<div class="team__card__header user-select-none">
+								<img src="./assets/images/teams/team-member-2.png" alt="A team member" class="team__card__header__image">
+							</div>
+							<div class="team__card__body">
+								<h3 class="team__card__body__title">Jaden</h3>
+								<p>Hi my name is Jaden Carducci, I’ve made thousands of dollars of revenue for many different companies  some of them are: CrosshairCooks,   TheSpinDriftBoard, TheFinestSupply and many more. I have over 3+ years in experience with content creation, social media  marketing, and post production softwares. Im looking forward to working with you and you’re business and you cannot go wrong with choosing Valcartier.</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="team__card">
-						<div class="team__card__header user-select-none">
-							<img src="./assets/images/teams/team-member-3.png" alt="A team member" class="team__card__header__image">
-						</div>
-						<div class="team__card__body">
-							<h3 class="team__card__body__title">Humza</h3>
-							<p>Hi, I'm Humza. I’ve created multiple six-figure businesses, and I Have 6 Years of Experience Within Marketing, Design & Development. With my limited time outside of working, I will almost definitely be at the gym or be cooking. With my passion and Drive towards success and Wealth, I constantly outwork myself to achieve the best results in any task i have.</p>
+					<div class="col-lg-4 col-md-6">
+						<div class="team__card">
+							<div class="team__card__header user-select-none">
+								<img src="./assets/images/teams/team-member-3.png" alt="A team member" class="team__card__header__image">
+							</div>
+							<div class="team__card__body">
+								<h3 class="team__card__body__title">Humza</h3>
+								<p>Hi, I'm Humza. I’ve created multiple six-figure businesses, and I Have 6 Years of Experience Within Marketing, Design & Development. With my limited time outside of working, I will almost definitely be at the gym or be cooking. With my passion and Drive towards success and Wealth, I constantly outwork myself to achieve the best results in any task i have.</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -310,13 +346,18 @@
 	</section>
 
 	<!-- Schedule Section -->
-	<section id="contact" class="contact section-gap">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-12 text-center">
-					<h1 class="contact__title">Schedule A Free 30 minute Call With Us</h1>
-					<p class="contact__text">You’ll recieve our expert opinions on the best way to market your services, a custom package and a guide towards the next steps</p>
-					<a class="primary-btn" href="tel:+8801992409030">Let’s Talk</a>
+	<section id="contact" class="contact position-relative">
+		<svg class="section-icon user-select-none" width="1em" height="1em" viewBox="0 0 62 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M31 0L32.5047 29.9289L61.4338 22.1115L33.4347 32.7911L49.8091 57.8885L31 34.56L12.1909 57.8885L28.5653 32.7911L0.566191 22.1115L29.4953 29.9289L31 0Z" fill="currentColor"/>
+		</svg>
+		<div class="section-gap">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-12 text-center">
+						<h1 class="contact__title">Schedule A Free 30 minute Call With Us</h1>
+						<p class="contact__text">You’ll recieve our expert opinions on the best way to market your services, a custom package and a guide towards the next steps</p>
+						<a class="primary-btn" href="tel:+8801992409030">Let’s Talk</a>
+					</div>
 				</div>
 			</div>
 		</div>

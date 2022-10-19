@@ -1,4 +1,16 @@
 .testimonial{
+    .section-icon{
+        &--right{
+            top: -3%;
+            right: 20%;
+        }
+
+        &--left{
+            bottom: 2%;
+            left: 2%;
+        }
+    }
+
     .section-header{
         @include min-desktop{
             padding-bottom: toRem(50);
@@ -7,6 +19,7 @@
             padding-bottom: toRem(100);
         }
     }
+
     &__slider__nav{
         .slick-dots{
             margin-bottom: 0;
@@ -97,6 +110,7 @@
             }
         }
     }
+
     &__card{
         &__text{
             margin: toRem(25) 0;

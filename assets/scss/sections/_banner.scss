@@ -1,8 +1,32 @@
 .banner{
-    padding: toRem(70) 0;
+    .section-icon{
+        &--left{
+            top: 2%;
+            left: 2%;
+        }
 
-    @include desktop{
-        padding-bottom: 0;
+        &--right{
+            top: 2%;
+            right: 2%;
+        }
+
+        &--bottom-right{
+            bottom: 5%;
+            right: 35%;
+        }
+
+        &--btn{
+            top: -30%;
+            right: -30%;
+        }
+    }
+
+    .section-wrapper{
+        padding: toRem(70) 0;
+    
+        @include desktop{
+            padding-bottom: 0;
+        }
     }
 
     &__content{
@@ -10,6 +34,7 @@
             text-align: center;
         }
     }
+
     &__title{
         font-size: toRem(32);
         font-weight: 700;
@@ -26,5 +51,9 @@
 
     &__text{
         margin: toRem(20) 0;
+    }
+
+    .primary-btn{
+        position: relative;
     }
 }

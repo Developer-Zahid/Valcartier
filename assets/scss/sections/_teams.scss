@@ -1,4 +1,16 @@
 .team{
+    .section-icon{
+        &--top{
+            top: 15%;
+            right: 10%;
+        }
+
+        &--bottom{
+            bottom: 2%;
+            right: 2%;
+        }
+    }
+
     &__card{
         padding-top: toRem(30);
 

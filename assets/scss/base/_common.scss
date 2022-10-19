@@ -27,7 +27,7 @@ body {
 	color: color-primary();
 	font-weight: 400;
 	font-family: $font-primary;
-	background-color: color-secondary();
+	background: linear-gradient(0deg, color-secondary(), color-secondary()), url('../images/background/noice.svg');
 }
 
 a,
@@ -84,6 +84,9 @@ img{
 	perspective: toRem(100000);
 
 	&__circle{
+		z-index: -1;
+		user-select: none;
+		pointer-events: none;
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -177,60 +180,6 @@ img{
 .container{
 	@include min-desktop-lg{
 		max-width: 1260px;
-	}
-}
-
-/* Common Slick Style */
-.slick{
-	&__arrows{
-		top: 0;
-		position: absolute;
-		z-index: 3;
-		width: toRem(40);
-		height: toRem(40);
-		color: unset;
-		background-color: unset;
-		font-size: toRem(20);
-		text-align: center;
-		cursor: pointer;
-		@extend %transition;
-		&--left{
-			right: 0;
-		}
-		&--right{
-			right: 0;
-		}
-		&:hover,
-		&:focus-visible{
-			color: unset;
-			background-color: unset;
-		}
-	}
-	&-dots{
-		display: flex;
-		justify-content: center;
-		margin-bottom: 0;
-		line-height: 0;
-		li{
-			&:not(:last-child){
-				margin-right: 1rem;
-			}
-			button{
-				font-size: 0;
-				width: toRem(8);
-				height: toRem(8);
-				background: $color-primary;
-				border: 1px solid $color-primary;
-				border-radius: toRem(8);
-				@extend %transition;
-			}
-			&.slick-active{
-				button{
-					width: toRem(16);
-					background: transparent;
-				}
-			}
-		}
 	}
 }
 

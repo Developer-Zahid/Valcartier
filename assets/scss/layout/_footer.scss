@@ -36,8 +36,11 @@
 
         &__link{
             color: color-primary();
-            font-size: toRem(16);
+            font-size: toRem(14);
             font-weight: 500;
+            @include min-mobile{
+                font-size: toRem(16);
+            }
 
             &:hover,
             &:focus
@@ -63,8 +66,11 @@
             }
 
             &__link{
-                font-size: toRem(16);
-                line-height: 2;
+                font-size: toRem(14);
+                @include min-mobile{
+                    font-size: toRem(16);
+                    line-height: 2;
+                }
                 font-weight: 500;
                 text-transform: capitalize;
                 display: block;
@@ -79,7 +85,10 @@
     }
     &__copyright{
         color: color-primary();
-        font-size: toRem(16);
+        font-size: toRem(14);
+        @include min-mobile{
+            font-size: toRem(16);
+        }
         font-weight: 500;
         margin-bottom: 0;
         text-transform: capitalize;

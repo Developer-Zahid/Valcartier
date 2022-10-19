@@ -1,0 +1,113 @@
+.testimonial{
+    .section-header{
+        @include min-desktop{
+            padding-bottom: toRem(50);
+        }
+        @include min-desktop-lg{
+            padding-bottom: toRem(100);
+        }
+    }
+    &__slider__nav{
+        .slick-dots{
+            margin-bottom: 0;
+            @include mobile{
+                padding: 0 toRem(20);
+            }
+            display: grid !important;
+            @include min-mobile{
+                grid-template-columns: 1fr toRem(213) 1fr;
+                grid-template-rows: 1fr toRem(213) 1fr;
+            }
+            grid-template-areas: 
+                'client_2 . client_3'
+                '. client_1 .'
+                'client_4 . client_5';
+
+            li{
+                @for $i from 1 through 5 {
+                    &:nth-child(#{$i}){
+                        grid-area: client_#{$i};
+                    }
+                }
+
+                button{
+                    position: relative;
+                    font-size: 0;
+                    width: toRem(70);
+                    height: toRem(70);
+                    background-color: color-primary();
+                    border: 1px solid color-primary();
+                    @include min-mobile{
+                        width: toRem(100);
+                        height: toRem(100);
+                        border-width: 2.5px;
+                    }
+                    border-radius: 50%;
+                    background-size: cover;
+                    background-position: center;
+                    box-shadow: toRem(20) toRem(20) toRem(90) color-primary(0.2);
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        transform: translate(50%, -50%);
+                        width: 50%;
+                        height: 50%;
+                        border-radius: inherit;
+                        background-color: #ffffff;
+                        background-image: url("data:image/svg+xml,%3Csvg width='1em' height='1em' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.7423 0.878235L14.6279 4.35148C13.5693 5.84975 12.5769 7.51827 11.6506 9.35705C10.7905 11.1958 10.2943 13.1027 10.1619 15.0777L15.6204 16.0992V27.847H0.436035V19.4703C0.436035 14.635 1.52772 10.7532 3.71109 7.82474C5.96062 4.8282 8.97102 2.5127 12.7423 0.878235ZM32.3926 0.878235L34.2782 4.35148C33.2196 5.84975 32.2272 7.51827 31.3009 9.35705C30.4408 11.1958 29.9446 13.1027 29.8123 15.0777L35.2707 16.0992V27.847H20.0863V19.4703C20.0863 14.635 21.178 10.7532 23.3614 7.82474C25.6109 4.8282 28.6213 2.5127 32.3926 0.878235Z' fill='black'/%3E%3C/svg%3E");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: toRem(16);
+                        @include min-mobile{
+                            background-size: toRem(22);
+                        }
+                        pointer-events: none;
+                        user-select: none;
+                        opacity: 0;
+                        transition: opacity .4s linear;
+                    }
+                }
+
+                &:nth-child(1){
+                    button{
+                        @include mobile{
+                            width: toRem(100);
+                            height: toRem(100);
+                        }
+                        @include min-mobile{
+                            width: toRem(213);
+                            height: toRem(213);
+                        }
+                        &::after{
+                            @include min-mobile{
+                                width: 30%;
+                                height: 30%;
+                            }
+                        }
+                    }
+                }
+
+                &.slick-active{
+                    button::after{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    &__card{
+        &__text{
+            margin: toRem(25) 0;
+            @include min-tablet{
+                margin: toRem(55) 0;
+            }
+        }
+        &__title{
+            font-size: toRem(18);
+            font-weight: 900;
+            margin-bottom: 0;
+        }
+    }
+}

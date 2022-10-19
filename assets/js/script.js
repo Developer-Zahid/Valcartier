@@ -3,14 +3,8 @@
 
 	/* Document on load functions */
 	$(window).on('load', function () {
-        // preLoader();
 		headerHeightFixer();
     });
-
-	/* Preloader init */
-	function preLoader(){
-		$(".preloader").delay(1000).fadeOut("slow");
-	}
 
 	/* Fixed Header */
 	$(window).on("scroll", function () {
@@ -60,6 +54,7 @@
         $('.offCanvasMenuCloser').toggleClass('show');
     });
     $('.offCanvasMenuCloser').on('click', function () {
+		$(".navbar-collapse").collapse("hide");
         $(this).removeClass('show');
         $("html").removeClass("overflow-hidden");
     });
@@ -103,31 +98,36 @@
 				disableDarkMode();
 			}
 		})
-	})()
+	})();
 
-    /*  Banner slider */
-    // $(".banner__slider").slick({
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     autoplay: true,
-    //     autoplaySpeed: 4000,
-    //     speed: 500,
-    //     arrows: true,
-    //     prevArrow: '<button class="slick__arrows slick__arrows--left border-0 d-inline-flex align-items-center justify-content-center position-absolute"><i class="fas fa-chevron-left"></i></button>',
-	// 	nextArrow: '<button class="slick__arrows slick__arrows--right border-0 d-inline-flex align-items-center justify-content-center position-absolute"><i class="fas fa-chevron-right"></i></button>',
-    //     dots: false,
-    //     pauseOnHover: false,
-    //     pauseOnFocus: false,
-    //     infinite: true,
-	// 	responsive: [
-	// 		{
-	// 			breakpoint: 768,
-	// 			settings: {
-	// 				arrows: false,
-	// 				dots: true
-	// 			}
-	// 		},
-	// 	]
-    // });
+    /*  Testimonials slider */
+	(function(){
+		const $testimonialSlider = $('.testimonial__slider');
+
+		if($testimonialSlider.length){
+			/* init reInit afterChange */
+			$testimonialSlider.on('init reInit', function(event, slick, currentSlide, nextSlide) {   
+				$(slick.$dots).appendTo(".testimonial__slider__nav");
+				$(slick.$slides).each(function(index, item){
+					$((slick.$dots).children("li")[index]).children().css("background-image", `url(${$(this).data("client-image")})`)
+				});
+			});
+
+			$testimonialSlider.slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				fade: true,
+				cssEase: 'linear',
+				autoplay: true,
+				autoplaySpeed: 5000,
+				speed: 400,
+				arrows: false,
+				dots: true,
+				pauseOnHover: false,
+				pauseOnFocus: false,
+				infinite: true,
+			});
+		}
+	})();
 
 })(jQuery);

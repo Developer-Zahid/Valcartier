@@ -1,13 +1,93 @@
 /* Footer Section Style */
 .footer{
-    &__copyright{
-        color: unset;
-        font-size: toRem(14);
+    &__top{
+        padding: toRem(80) 0 toRem(50);
+    }
+    &__bottom{
+        position: relative;
+        text-align: center;
+        padding: toRem(38) 0;
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-image: linear-gradient(to right, transparent, color-primary(0.5), transparent);
+        }
+    }
+    &__logo{
+        display: inline-block;
+
+        &__image{
+            max-height: toRem(30);
+        }
+    }
+    &__address{
+        padding: toRem(17) 0;
+        margin-bottom: 0;
+        &__icon{
+            color: color-primary();
+            font-size: toRem(18);
+            margin-right: toRem(8);
+        }
+
         &__link{
-            @extend %transition;
+            color: color-primary();
+            font-size: toRem(16);
+            font-weight: 500;
+
+            &:hover,
+            &:focus
+            {
+                color: color-primary();
+                text-decoration: underline;
+            }
+        }
+    }
+    &__block{
+        margin-bottom: toRem(30);
+
+        &__title{
+            font-size: toRem(32);
+            font-weight: 500;
+            text-transform: capitalize;
+            margin-bottom: toRem(16);
+        }
+
+        &__list{
+            &__item{
+                margin-bottom: toRem(16);
+            }
+
+            &__link{
+                font-size: toRem(16);
+                line-height: 2;
+                font-weight: 500;
+                text-transform: capitalize;
+                display: block;
+
+                &:hover,
+                &:focus
+                {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    &__copyright{
+        color: color-primary();
+        font-size: toRem(16);
+        font-weight: 500;
+        margin-bottom: 0;
+        text-transform: capitalize;
+        &__link{
             &:hover,
             &:focus{
-                color: unset;
+                color: currentColor;
+                text-decoration: underline;
             }
         }
     }

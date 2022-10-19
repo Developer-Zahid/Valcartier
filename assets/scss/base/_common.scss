@@ -168,6 +168,11 @@ img{
 	}
 }
 
+.sup{
+	vertical-align: super;
+	font-weight: inherit;
+}
+
 /* Custom Container Style */
 .container{
 	@include min-desktop-lg{

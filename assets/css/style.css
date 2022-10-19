@@ -142,13 +142,6 @@ img {
   pointer-events: none;
 }
 
-.list-inline {
-  font-size: 0;
-}
-.list-inline-item {
-  font-size: 1rem;
-}
-
 .overflow-x-hidden {
   overflow-x: hidden;
 }
@@ -286,13 +279,6 @@ img {
   .container {
     max-width: 1260px;
   }
-}
-
-/* Preloader Section Style */
-.preloader {
-  top: 0;
-  left: 0;
-  z-index: 9999;
 }
 
 /* Common Section Gap Style */
